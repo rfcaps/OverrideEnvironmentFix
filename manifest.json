@@ -1,0 +1,13 @@
+﻿{
+  "$schema": "https://raw.githubusercontent.com/bsmg/BSIPA-MetadataFileSchema/master/Schema.json",
+  "id": "OverrideEnvironmentFix",
+  "name": "OverrideEnvironmentFix",
+  "author": "RFCaps",
+  "version": "1.0.0",
+  "description": "Turns on override default environment by default again.",
+  "gameVersion": "1.22.0",
+  "dependsOn": {
+    "BSIPA": "^4.2.1",
+    "SiraUtil": "^3.0.0"
+  }
+}
