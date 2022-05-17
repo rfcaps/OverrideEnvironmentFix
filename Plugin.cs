@@ -1,8 +1,10 @@
 ﻿using HarmonyLib;
 using IPA;
+using IPA.Config.Stores;
 using JetBrains.Annotations;
 using System.Reflection;
 using IPALogger = IPA.Logging.Logger;
+using IPAConfig = IPA.Config.Config;
 
 namespace OverrideEnvironmentFix
 {
@@ -14,10 +16,12 @@ namespace OverrideEnvironmentFix
 
         [UsedImplicitly]
         [Init]
-        public Plugin(IPALogger logger)
+        public Plugin(IPALogger logger, IPAConfig config)
         {
             Logger.log = logger;
             logger.Info("OverrideEnvironmentFix initialized");
+
+            PluginConfig.Instance = config.Generated<PluginConfig>();
         }
 
         [UsedImplicitly]
